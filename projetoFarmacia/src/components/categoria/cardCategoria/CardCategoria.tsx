@@ -17,13 +17,13 @@ function CardTemas({ categoria }: CardTemasProps) {
             </p>
 
             <div className="flex">
-                <Link to={`/editarCategory/${categoria.id}`}
+                <Link to={`/editarCategoria/${categoria.id}`}
                     className='w-full text-slate-100 bg-[#c19e9f] hover:bg-[#f67b7f] 
                         flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
 
-                <Link to={`/deletarCategory/${categoria.id}`}
+                <Link to={`/deletarCategoria/${categoria.id}`}
                     className='text-slate-100 bg-red-400 hover:bg-red-700 w-full 
                         flex items-center justify-center'>
                     <button>Deletar</button>

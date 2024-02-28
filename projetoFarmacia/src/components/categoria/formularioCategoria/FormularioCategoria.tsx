@@ -11,7 +11,7 @@ function FormularioCategoria() {
     const { id } = useParams<{ id: string }>();
   
     async function buscarPorId(id: string) {
-      await buscar(`/categoria/${id}`, setCategoria);
+      await buscar(`/categorias/${id}`, setCategoria);
     }
   
     useEffect(() => {
@@ -34,7 +34,7 @@ function FormularioCategoria() {
   
       if (id !== undefined) {
         try {
-          await atualizar(`/categoria`, categoria, setCategoria)
+          await atualizar(`/categorias`, categoria, setCategoria)
   
           alert('Categoria atualizada com sucesso')
           retornar()
@@ -45,7 +45,7 @@ function FormularioCategoria() {
   
       } else {
         try {
-          await cadastrar(`/categoria`, categoria, setCategoria)
+          await cadastrar(`/categorias`, categoria, setCategoria)
   
           alert('Categoria cadastrada com sucesso')
   
@@ -58,7 +58,7 @@ function FormularioCategoria() {
     }
   
     function retornar() {
-      navigate("/categorias")
+      navigate("/cadastroCategoria")
     }
   
     return (
